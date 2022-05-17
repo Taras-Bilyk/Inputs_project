@@ -33,22 +33,60 @@ hr{
     max-width: 330px;
 }
 .form1 input,
-.table_input{
-    width: 94.5%;
+.table_input,
+.text_input,
+.table2 input,
+.table3 input{
+    width: 100%;
     padding: 12.5px 17px;
     padding-right: 0;
     margin: 4.5px 0;
     border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
+    outline: none;
+}
+.form1 input:focus,
+.table_input:focus,
+.text_input:focus,
+.table select:focus,
+.table2 input:focus,
+.table3 input:focus{
+    border: 0;
+    border: 1px solid #3e6aff;
+}
+.form1_label_select{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+}
+.form1_label_select option:first-child{
+    display: none;
+}
+.form1_label_select select{
+    position: relative;
+    -webkit-appearance: none;
+    z-index: 1;
+}
+.form1_label_select:before{
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 21px;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    z-index: 0;
+}
+.form1 select:focus{
+    border: 1px solid #3e6aff;
 }
 .form1 select,
-.form1 option,
 .table select,
-.table option,
-.table3 select,
-.table3 option{
+.table3 select{
     width: 100%;
     margin: 4.5px 0;
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid #ccc;
     padding: 11.5px 14px;
     padding-right: 0;
@@ -56,6 +94,8 @@ hr{
     color: #1f222c;
     font-weight: 400;
     font-family: "Roboto", sans-serif;
+    border-radius: 3px;
+    outline: none;
 }
 .form1 textarea,
 .table textarea{
@@ -66,6 +106,14 @@ hr{
     padding: 11.5px 14px;
     padding-right: 0;
     padding-bottom: 0;
+    border-radius: 3px;
+    outline: 0;
+    min-height: 29px;
+    max-height: 150px;
+}
+.form1 textarea:focus,
+.table textarea:focus{
+    border: 1px solid #3e6aff;
 }
 .form1 button,
 .table button{
@@ -82,13 +130,193 @@ hr{
     width: 100%;
     margin-top: 4.5px;
 }
+.form1 button:hover,
+.table button:hover,
+.form6 button:hover,
+.buttons button:last-child:hover{
+    background-color: #07be51;
+    box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
+}
+.buttons button:first-child:hover{
+    background-color: #85868d;
+    color: #fff;
+}
 .form2_form{
     display: flex;
     justify-content: space-between;
 }
+.r_style1{
+    visibility: hidden;
+    position: absolute;
+}
+.r_style1+label{
+    padding: 0 20px;
+    position: relative;
+}
+.r_style1+label:before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.r_style1:checked+label:before{
+    border-color: #00f;
+}
+.r_style1:checked+label:after{
+    content: "";
+    position: absolute;
+    border: 1px solid #00f;
+    background-color: #00f;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    left: 4px;
+    top: 4px;
+}
 .radiobutton{
     cursor: pointer;
 }
+.r_style2{
+    visibility: hidden;
+    position: absolute;
+}
+.r_style2+label{
+    cursor: pointer;
+    padding: 0 20px;
+    position: relative;
+}
+.r_style2+label:before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.r_style2:checked+label:before{
+    border-color: #00f;
+}
+.r_style2:checked+label:after{
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #f00;
+    border-right: 2px solid #f00;
+    border-color: #00f;
+    box-sizing: border-box;
+    width: 4px;
+    height: 8px;
+    left: 7px;
+    top: 4.5px;
+    transform: rotate(45deg)
+}
+.r_style3{
+    visibility: hidden;
+    position: absolute;
+}
+.r_style3+label{
+    padding: 5px 70px;
+    position: relative;
+}
+.r_style3+label:before{
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 26px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    top: 3px;
+    left: 0;
+    box-sizing: border-box;
+    background-color: #ccc;
+}
+.r_style3:checked+label:before{
+    border-color: #00f;
+    background-color: #00f;
+}
+.r_style3+label:after{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    left: 2px;
+    top: 5px;
+    transition: all 0.3s ease;
+}  
+.r_style3:checked+label:after{
+    content: "";
+    position: absolute;
+    border: 2px solid #fff;
+    border-color: #fff;
+    box-sizing: border-box;
+    width: 22px;
+    height: 22px;
+    left: 22px;
+    top: 5px;
+    box-shadow: 0 0 2.5px rgba(0,0,0,0.5);
+}
+/*  */
+
+.r_style4{
+    visibility: hidden;
+    position: absolute;
+}
+.r_style4+label{
+    padding: 30px 85px;
+    position: relative;
+}
+.r_style4+label:before{
+    content: "";
+    background: url(../images/men.png) no-repeat;
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
+}
+.r_style4:checked+label:before{
+    filter: grayscale(0%);
+}
+.r_style5{
+    visibility: hidden;
+    position: absolute;
+}
+.r_style5+label{
+    padding: 30px 85px;
+    position: relative;
+}
+.r_style5+label:before{
+    content: "";
+    background: url(../images/women.png) no-repeat;
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
+}
+.r_style5:checked+label:before{
+    filter: grayscale(0%);
+}
+/*  */
+
 .form2 ul,
 .form3 ul{
     padding-left: 0;
@@ -201,6 +429,8 @@ hr{
     padding: 11.5px;
     margin-top: 7px;
     border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
 }
 .table2 tr td:last-child,
 .table3 tr td:last-child{
@@ -209,9 +439,11 @@ hr{
 .table3 tr:first-child td:last-child input{
     width: 94.5%;
     margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .table_hr{
-    width: 708px;
+    width: 100%;
     margin: 30px 0;
 }
 .table3 select{
@@ -227,6 +459,7 @@ hr{
     margin: 25px 10px;
     margin-left: 0;
     margin-bottom: 0;
+    width: 17px;
 }
 .buttons{
     display: flex;
@@ -256,10 +489,7 @@ hr{
     position: fixed;
     top: 60px;
     right: 108px;
-}
-.form6_form{
-    position: sticky;
-    top: 50px;
+    width: 300px;
 }
 .form6 form{
     border-radius: 5px;
@@ -307,6 +537,11 @@ hr{
     width: 100%;
 }
 .text_input{
-    padding: 9px 0;
+    padding: 9px 10px;
     border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+.table_div{
+    max-width: 680px;
 }

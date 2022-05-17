@@ -15,9 +15,14 @@
                 <h2>01. проста форма</h2>
                 <input type="text" placeholder="Введіть ім’я">
                 <input type="text" placeholder="Email">
-                <select name="form1_select">
-                    <option value="">Ваше місто</option>
-                </select>
+                <label class="form1_label_select">
+                    <select name="form1_select">
+                        <option value="">Ваше місто</option>
+                        <option value="">Київ</option>
+                        <option value="">Львів</option>
+                        <option value="">Хмельницький</option>
+                    </select>
+                </label>
                 <textarea placeholder="Email"></textarea>
                 <button type="submit">Зареєструватися</button>
             </form>
@@ -30,18 +35,18 @@
                     <div>
                         <form action="index.html" method="post" class="form2_form1">
                             <ul>
-                                <li><input type="radio" name="radiobutton_1" id="radio1" class="radiobutton" checked><label for="radio1" class="radiobutton">Нова Пошта</label></li>
-                                <li><input type="radio" name="radiobutton_1" id="radio2" class="radiobutton"><label for="radio2" class="radiobutton">Кур’єр</label></li>
-                                <li><input type="radio" name="radiobutton_1" id="radio3" class="radiobutton" disabled><label for="radio3" class="radiobutton disabled">Самовивіз</label></li>
+                                <li><input type="radio" name="radiobutton_1" id="radio1" class="radiobutton r_style1" checked><label for="radio1" class="radiobutton">Нова Пошта</label></li>
+                                <li><input type="radio" name="radiobutton_1" id="radio2" class="radiobutton r_style1"><label for="radio2" class="radiobutton">Кур’єр</label></li>
+                                <li><input type="radio" name="radiobutton_1" id="radio3" class="radiobutton r_style1" disabled><label for="radio3" class="radiobutton disabled">Самовивіз</label></li>
                             </ul>
                         </form>
                     </div>
                     <div>
                         <form action="index.html" method="post" class="form2_form2">
                             <ul>
-                                <li><input type="checkbox" id="check1"><label for="check1">Прочитав умови договору</label></li>
-                                <li><input type="checkbox" id="check2"><label for="check2">Згідний з ПДВ 9%</label></li>
-                                <li><input type="checkbox" id="check3" disabled><label for="check3" class="disabled">Отримувати новини на ел. пошту</label></li>
+                                <li><input type="checkbox" id="check1" class="r_style2"><label for="check1">Прочитав умови договору</label></li>
+                                <li><input type="checkbox" id="check2" class="r_style2"><label for="check2">Згідний з ПДВ 9%</label></li>
+                                <li><input type="checkbox" id="check3" class="r_style2" disabled><label for="check3" class="disabled">Отримувати новини на ел. пошту</label></li>
                             </ul>
                         </form>
                     </div>
@@ -49,9 +54,9 @@
                         <form action="index.html" method="post" class="form2_form3">
                             <ul>
                                 <li><p>Статус</p></li>
-                                <li><input type="checkbox" id="check4"><label for="check4">Новинки</label></li>
-                                <li><input type="checkbox" id="check5"><label for="check5">Акційні товари</label></li>
-                                <li><input type="checkbox" id="check6"><label for="check6">Розпродаж</label></li>
+                                <li><input type="checkbox" id="check4" class="r_style2"><label for="check4">Новинки</label></li>
+                                <li><input type="checkbox" id="check5" class="r_style2"><label for="check5">Акційні товари</label></li>
+                                <li><input type="checkbox" id="check6" class="r_style2"><label for="check6">Розпродаж</label></li>
                             </ul>
                             <ul>
                                 <li><p>Дата</p></li>
@@ -68,17 +73,17 @@
             <div class="form3_f1">
                 <form action="index.html" method="post">
                     <ul>
-                        <li><input type="radio" id="checkbox1" name="forms3_checkbox"><label for="checkbox1">Чоловік</label></li>
-                        <li><input type="radio" id="checkbox2" name="forms3_checkbox"><label for="checkbox2">Жінка</label></li>
+                        <li><input type="radio" id="checkbox1" name="forms3_checkbox" class="r_style4"><label for="checkbox1">Чоловік</label></li>
+                        <li><input type="radio" id="checkbox2" name="forms3_checkbox" class="r_style5"><label for="checkbox2">Жінка</label></li>
                     </ul>
                 </form>
             </div>
             <div class="form3_f2">
                 <form action="index.html" method="post">
                     <ul>
-                        <li><input type="checkbox" id="checkbox3"><label for="checkbox3">Отримувати новини</label></li>
-                        <li><input type="checkbox" id="checkbox4"><label for="checkbox4">Купити додому ковбаси</label></li>
-                        <li><input type="checkbox" id="checkbox5"><label for="checkbox5">Включити світло</label></li>
+                        <li><input type="checkbox" id="checkbox3" class="r_style3"><label for="checkbox3">Отримувати новини</label></li>
+                        <li><input type="checkbox" id="checkbox4" class="r_style3"><label for="checkbox4">Купити додому ковбаси</label></li>
+                        <li><input type="checkbox" id="checkbox5" class="r_style3"><label for="checkbox5">Включити світло</label></li>
                     </ul>
                 </form>
             </div>
@@ -103,8 +108,8 @@
                 <tr>
                     <td>Стать:</td>
                     <td>
-                        <input type="radio" id="table_radio1" name="r1"><label for="table_radio1">Чоловік</label>
-                        <input type="radio" id="table_radio2" name="r1" checked><label for="table_radio2">Жінка</label>
+                        <input type="radio" id="table_radio1" name="r1" class="r_style1"><label for="table_radio1">Чоловік</label>
+                        <input type="radio" id="table_radio2" name="r1" class="r_style1" checked><label for="table_radio2">Жінка</label>
                     </td>
                 </tr>
                 <tr>
@@ -124,36 +129,38 @@
         <h2>05. форма таблицею</h2>
         <p class="neobhidhi_polya">Оформлення заявки</p>
         <form action="index.html" method="post">
-            <table class="table2">
-                <tr>
-                    <td>Прізвище та ім’я<br><input type="text"></td>
-                    <td>Ел. пошта<br><input type="text"></td>
-                    <td>Телефон<br><input type="text"></td>
-                </tr>
-            </table>
-            <hr class="table_hr">
-            <table class="table3">
-                <tr>
-                    <td>Країна
-                        <select>
-                            <option>Індонезія</option>
-                        </select>
-                    </td>
-                    <td colspan="2">Адреса<br><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Місто<br><input type="text"></td>
-                    <td>Будинок<br><input type="text"></td>
-                    <td>Поштовий індекс<br><input type="text"></td>
-                </tr>
-                <tr>
-                    <td colspan="3"><input type="checkbox" id="accept"><label for="accept">Я погоджуюсь з правилами оплати та доставки товару</label></td>
-                </tr>
-            </table>
-            <hr class="table_hr">
-            <div class="buttons">
-                <button>Повернутися назад</button>
-                <button type="submit">Оформити покупку</button>
+            <div class="table_div">
+                <table class="table2">
+                    <tr>
+                        <td>Прізвище та ім’я<br><input type="text"></td>
+                        <td>Ел. пошта<br><input type="text"></td>
+                        <td>Телефон<br><input type="text"></td>
+                    </tr>
+                </table>
+                <hr class="table_hr">
+                <table class="table3">
+                    <tr>
+                        <td>Країна
+                            <select>
+                                <option>Індонезія</option>
+                            </select>
+                        </td>
+                        <td colspan="2">Адреса<br><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Місто<br><input type="text"></td>
+                        <td>Будинок<br><input type="text"></td>
+                        <td>Поштовий індекс<br><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="checkbox" id="accept" class="r_style2"><label for="accept">Я погоджуюсь з правилами оплати та доставки товару</label></td>
+                    </tr>
+                </table>
+                <hr class="table_hr">
+                <div class="buttons">
+                    <button>Повернутися назад</button>
+                    <button type="submit">Оформити покупку</button>
+                </div>
             </div>
         </form>
         <div class="form6">
@@ -165,7 +172,7 @@
                     <li><p>Пароль</p></li>
                     <li><input type="text" class="text_input"></li>
                     <li><a href="#">Забули пароль?</a></li>
-                    <li><input type="checkbox" id="fixed_form_checkbox"><label for="fixed_form_checkbox">Запам’ятати пароль</label></li>
+                    <li><input type="checkbox" id="fixed_form_checkbox" class="r_style2"><label for="fixed_form_checkbox">Запам’ятати пароль</label></li>
                     <li><button type="submit">Увійти</button></li>
                 </ul>
             </form>
