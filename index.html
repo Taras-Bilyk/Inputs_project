@@ -14,7 +14,7 @@
             <form action="index.html" method="post">
                 <h2>01. проста форма</h2>
                 <input type="text" placeholder="Введіть ім’я">
-                <input type="text" placeholder="Email">
+                <input type="emali" placeholder="Email">
                 <label class="form1_label_select">
                     <select name="form1_select">
                         <option value="">Ваше місто</option>
@@ -94,16 +94,23 @@
         <form action="index.html" method="post">
             <table class="table">
                 <tr>
-                    <td>ФІО:</td>
-                    <td><input class="table_input" type="text" placeholder="Введіть ім’я" required></td>
+                    <td><label for="fio">ФІО:</label></td>
+                    <td><input class="table_input" type="text" placeholder="Введіть ім’я" required id="fio"></td>
                 </tr>
                 <tr>
-                    <td>Пароль:</td>
-                    <td><input class="table_input" type="text" placeholder="Введіть не менше 6 символів" required></td>
+                    <td><label for="password">Пароль:</label></td>
+                    <td><input class="table_input" type="password" placeholder="Введіть не менше 6 символів" required id="password"></td>
                 </tr>
                 <tr>
-                    <td>Місто:</td>
-                    <td><select required><option>Хмельницький</option></select></td>
+                    <td><label for="select2">Місто:</label></td>
+                    <td>
+                        <label class="form1_label_select">
+                            <select required id="select2">
+                                <option>Хмельницький</option>
+                                <option>Хмельницький</option>
+                            </select>
+                        </label>
+                    </td>
                 </tr>
                 <tr>
                     <td>Стать:</td>
@@ -113,13 +120,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Фото:</td>
-                    <td><input type="file"></td>
+                    <td><label for="file">Фото:</label></td>
+                    <td class="td_file"><label for="file"></label><input type="file" class="r_style6" id="file"></td>
                 </tr>
                 <tr>
-                    <td>Коментарій:</td>
+                    <td><label for="t_a">Коментарій:</label></td>
                     <td>
-                        <textarea placeholder="Введіть текст повідомлення" required></textarea><br>
+                        <textarea placeholder="Введіть текст повідомлення" required id="t_a"></textarea><br>
                         <button type="submit">Зареєструватися</button>
                     </td>
                 </tr>
@@ -132,28 +139,31 @@
             <div class="table_div">
                 <table class="table2">
                     <tr>
-                        <td>Прізвище та ім’я<br><input type="text"></td>
-                        <td>Ел. пошта<br><input type="text"></td>
-                        <td>Телефон<br><input type="text"></td>
+                        <td><label for="name">Прізвище та ім’я</label><br><input type="text" id="name"></td>
+                        <td><label for="mail2">Ел. пошта</label><br><input type="mail" id="mail2"></td>
+                        <td><label for="tel">Телефон</label><br><input type="tel" id="tel"></td>
                     </tr>
                 </table>
                 <hr class="table_hr">
                 <table class="table3">
                     <tr>
                         <td>Країна
-                            <select>
-                                <option>Індонезія</option>
-                            </select>
+                            <label class="form1_label_select">
+                                <select>
+                                    <option>Індонезія</option>
+                                    <option>Індонезія</option>
+                                </select>
+                            </label>
                         </td>
-                        <td colspan="2">Адреса<br><input type="text"></td>
+                        <td colspan="2"><label for="adresa">Адреса</label><br><input type="text" id="adresa"></td>
                     </tr>
                     <tr>
-                        <td>Місто<br><input type="text"></td>
-                        <td>Будинок<br><input type="text"></td>
-                        <td>Поштовий індекс<br><input type="text"></td>
+                        <td><label for="city">Місто</label><br><input type="text" id="city"></td>
+                        <td><label for="house">Будинок</label><br><input type="text" id="house"></td>
+                        <td><label for="index">Поштовий індекс</label><br><input type="text" id="index"></td>
                     </tr>
                     <tr>
-                        <td colspan="3"><input type="checkbox" id="accept" class="r_style2"><label for="accept">Я погоджуюсь з правилами оплати та доставки товару</label></td>
+                        <td colspan="3"><input type="checkbox" id="accept" class="r_style2"><label for="accept" class="label">Я погоджуюсь з правилами оплати та доставки товару</label></td>
                     </tr>
                 </table>
                 <hr class="table_hr">
@@ -167,12 +177,10 @@
             <h2>06. фіксована форма</h2>
             <form action="index.html" method="post" class="form6_form">
                 <ul>
-                    <li><p>Логін</p></li>
-                    <li><input type="text" class="text_input"></li>
-                    <li><p>Пароль</p></li>
-                    <li><input type="text" class="text_input"></li>
+                    <li><label for="login_f">Логін</label><input type="text" class="text_input" id="login_f"></li>
+                    <li><label for="password_f">Пароль</label><input type="password" class="text_input" id="password_f"></li>
                     <li><a href="#">Забули пароль?</a></li>
-                    <li><input type="checkbox" id="fixed_form_checkbox" class="r_style2"><label for="fixed_form_checkbox">Запам’ятати пароль</label></li>
+                    <li><input type="checkbox" id="fixed_form_checkbox" class="r_style2"><label for="fixed_form_checkbox" class="l">Запам’ятати пароль</label></li>
                     <li><button type="submit">Увійти</button></li>
                 </ul>
             </form>
