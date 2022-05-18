@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Форми, чекбокси, інпути учбовий макет</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <form action="index.html" method="post">
                 <h2>01. проста форма</h2>
                 <input type="text" placeholder="Введіть ім’я">
-                <input type="emali" placeholder="Email">
+                <input type="email" placeholder="Email">
                 <label class="form1_label_select">
                     <select name="form1_select">
                         <option value="">Ваше місто</option>
@@ -159,8 +159,8 @@
                     </tr>
                     <tr>
                         <td><label for="city">Місто</label><br><input type="text" id="city"></td>
-                        <td><label for="house">Будинок</label><br><input type="text" id="house"></td>
-                        <td><label for="index">Поштовий індекс</label><br><input type="text" id="index"></td>
+                        <td><label for="house">Будинок</label><br><input type="number" id="house"></td>
+                        <td><label for="index">Поштовий індекс</label><br><input type="number" id="index"></td>
                     </tr>
                     <tr>
                         <td colspan="3"><input type="checkbox" id="accept" class="r_style2"><label for="accept" class="label">Я погоджуюсь з правилами оплати та доставки товару</label></td>
@@ -173,19 +173,22 @@
                 </div>
             </div>
         </form>
-        <div class="form6">
-            <input type="checkbox" class="form6_check">
-            <h2>06. фіксована форма</h2>
-            <form action="index.html" method="post" class="form6_form">
+        <div class="f_div">
+            <input type="checkbox" class="form6_check" id="f6c"><label for="f6c"></label>
+            <div class="form6">
                 
-                <ul>
-                    <li><label for="login_f">Логін</label><input type="text" class="text_input" id="login_f"></li>
-                    <li><label for="password_f">Пароль</label><input type="password" class="text_input" id="password_f"></li>
-                    <li><a href="#">Забули пароль?</a></li>
-                    <li><input type="checkbox" id="fixed_form_checkbox" class="r_style2"><label for="fixed_form_checkbox" class="l">Запам’ятати пароль</label></li>
-                    <li><button type="submit">Увійти</button></li>
-                </ul>
-            </form>
+                <h2>06. фіксована форма</h2>
+                <form action="index.html" method="post" class="form6_form">
+                    
+                    <ul>
+                        <li><label for="login_f">Логін</label><input type="text" class="text_input" id="login_f"></li>
+                        <li><label for="password_f">Пароль</label><input type="password" class="text_input" id="password_f"></li>
+                        <li><a href="#">Забули пароль?</a></li>
+                        <li><input type="checkbox" id="fixed_form_checkbox" class="r_style2"><label for="fixed_form_checkbox" class="l">Запам’ятати пароль</label></li>
+                        <li><button type="submit">Увійти</button></li>
+                    </ul>
+                </form>
+            </div>
         </div>
     </div>
 </body>

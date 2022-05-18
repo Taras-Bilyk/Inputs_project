@@ -227,7 +227,7 @@ hr{
     box-sizing: border-box;
     width: 4px;
     height: 8px;
-    left: 7px;
+    left: 6px;
     top: 3.5px;
     transform: rotate(45deg)
 }
@@ -557,7 +557,7 @@ hr{
     background-color: #12d661;
     color: #fff;
 }
-.form6{
+.f_div{
     position: fixed;
     top: 60px;
     right: 9%;
@@ -629,11 +629,63 @@ hr{
 .table3{
     width: 100%;
 }
-.form6_check{
+/* .form6_check{
     position: absolute;
+    visibility: hidden;
     right: 21px;
-    top: 5px;
+    top: 65px;
+    z-index: 1;
+} */
+/* .form6_check:checked+.form6{
+    display: none;
+} */
+/* .form6_check:checked{
+    display: none;
+} */
+/* .form6_check+label{
+    padding: 0 7px;
+    position: relative;
+    background-color: #aaa;
 }
-.form6_check:checked form{
-    background-color: #000;
+.form6_check+label:before{
+    content: "+";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    font-size: 20px;
+    border-color: #b3b3b3;
+    transform: rotate(45deg);
+} */
+.form6_check{
+    visibility: hidden;
+    position: absolute;
+}
+.form6_check+label{
+    padding: 0 7px;
+    /* position: relative; */
+}
+.form6_check+label:before{
+    content: "+";
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    font-size: 20px;
+    color: #b3b3b3;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.form6_check:checked+label:before{
+    display: none;
+}
+.form6_check:checked{
+    display: none;
+}
+.form6_check:checked~.form6{
+    display: none;
+}
+.form6_check+label:hover:before{
+    cursor: pointer;
+    color: #949494;
 }
