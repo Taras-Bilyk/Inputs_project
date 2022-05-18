@@ -662,13 +662,15 @@ hr{
 }
 .form6_check+label{
     padding: 0 7px;
+    position: absolute;
+    top: 65px;
+    right: 13px;
+
     /* position: relative; */
 }
 .form6_check+label:before{
     content: "+";
     position: absolute;
-    top: 80px;
-    right: 10px;
     width: 12px;
     height: 12px;
     font-size: 20px;
