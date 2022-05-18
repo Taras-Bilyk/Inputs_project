@@ -19,7 +19,7 @@ h2{
 }
 hr{
     border: 0;
-    border: 1px solid #dcdcde;
+    border-top: 1px solid #dcdcde;
     margin: 50px 0;
 }
 .wrapper{
@@ -170,6 +170,9 @@ hr{
     left: 0;
     box-sizing: border-box;
 }
+.r_style1:disabled+label:before{
+    background-color: #f7f7f7;
+}
 .r_style1:checked+label:before{
     border-color: #3e6aff;
 }
@@ -195,6 +198,7 @@ hr{
 .r_style2+label{
     cursor: pointer;
     padding: 1px 20px;
+    padding-right: 5px;
     position: relative;
     display: inline-block;
 }
@@ -224,8 +228,11 @@ hr{
     width: 4px;
     height: 8px;
     left: 7px;
-    top: 4.5px;
+    top: 3.5px;
     transform: rotate(45deg)
+}
+.r_style2:disabled+label:before{
+    background-color: #f7f7f7;
 }
 .r_style3{
     visibility: hidden;
@@ -351,6 +358,7 @@ hr{
     font-weight: 700;
     font-family: "Roboto" , sans-serif;
     display: inline-block;
+    cursor: pointer;
 }
 
 /*  */
@@ -393,6 +401,7 @@ hr{
     font-weight: 700;
     font-family: "Roboto", sans-serif;
     padding-left: 10px;
+    padding-right: 30px;
 }
 .form2_form3 li{
     margin: 0 12px;
@@ -406,6 +415,7 @@ hr{
     border-radius: 3px;
     outline: none;
     padding: 12.5px 17px;
+    font-family: "Roboto", sans-serif;
 }
 .date_input:focus{
     border: 1px solid #3e6aff;
@@ -494,6 +504,12 @@ hr{
     width: 100%;
     margin: 30px 0;
     box-sizing: border-box;
+}
+.table tr:nth-child(4) label{
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
 }
 .table3 select{
     margin-bottom: 19px;
@@ -609,14 +625,15 @@ hr{
 .table_div{
     max-width: 680px;
 }
-.form6_form>input{
+.table2,
+.table3{
+    width: 100%;
+}
+.form6_check{
     position: absolute;
     right: 21px;
     top: 5px;
 }
-.form6_form>input:checked ul{
+.form6_check:checked form{
     background-color: #000;
 }
-/* .form6_check:checked .form6 form{
-    background-color: #000;
-} */
