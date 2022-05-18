@@ -24,7 +24,7 @@ hr{
 }
 .wrapper{
     margin: 0 auto;
-    max-width: 990px;
+    max-width: 82%;
     position: relative;
 }
 .wrapper textarea{
@@ -55,6 +55,7 @@ hr{
 .table3 input:focus{
     border: 0;
     border: 1px solid #3e6aff;
+    box-shadow:0 0 2.5px rgba(62,106,255,0.55)
 }
 .form1_label_select{
     position: relative;
@@ -81,6 +82,7 @@ hr{
 }
 .form1 select:focus{
     border: 1px solid #3e6aff;
+    box-shadow:0 0 2.5px rgba(62,106,255,0.55)
 }
 .form1 select,
 .table select,
@@ -89,7 +91,7 @@ hr{
     margin: 4.5px 0;
     background-color: transparent;
     border: 1px solid #ccc;
-    padding: 11.5px 14px;
+    padding: 10.8px 14px;
     padding-right: 0;
     font-size: 14px;
     color: #1f222c;
@@ -117,6 +119,7 @@ hr{
 .form1 textarea:focus,
 .table textarea:focus{
     border: 1px solid #3e6aff;
+    box-shadow:0 0 2.5px rgba(62,106,255,0.55)
 }
 .form1 button,
 .table button{
@@ -193,15 +196,15 @@ hr{
     cursor: pointer;
     padding: 1px 20px;
     position: relative;
-    margin-top: 20px;
     display: inline-block;
 }
 .r_style2+label:before{
     content: "";
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
     border: 1px solid #ccc;
+    background-color: #fff;
     border-radius: 3px;
     top: 0;
     left: 0;
@@ -209,12 +212,13 @@ hr{
 }
 .r_style2:checked+label:before{
     border-color: #3e6aff;
+    background-color: #fff;
 }
 .r_style2:checked+label:after{
     content: "";
     position: absolute;
-    border-bottom: 2px solid #f00;
-    border-right: 2px solid #f00;
+    border-bottom: 2px solid #3e6aff;
+    border-right: 2px solid #3e6aff;
     border-color: #3e6aff;
     box-sizing: border-box;
     width: 4px;
@@ -398,6 +402,14 @@ hr{
 }
 .date_input{
     margin-left: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    padding: 12.5px 17px;
+}
+.date_input:focus{
+    border: 1px solid #3e6aff;
+    box-shadow:0 0 2.5px rgba(62,106,255,0.55)
 }
 .form3 li{
     list-style: none;
@@ -484,7 +496,14 @@ hr{
     box-sizing: border-box;
 }
 .table3 select{
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+}
+.table3 select:focus{
+    border: 1px solid #3e6aff;
+    box-shadow:0 0 2.5px rgba(62,106,255,0.55)
+}
+.table3 tr:last-child td{
+    padding-top: 20px;
 }
 .label{
     font-size: 14px;
@@ -525,10 +544,11 @@ hr{
 .form6{
     position: fixed;
     top: 60px;
-    right: 108px;
+    right: 9%;
     width: 300px;
 }
 .form6 form{
+    position: relative;
     border-radius: 5px;
     box-shadow: 0px 5px 6px rgba(0,0,0,0.15);
     background-color: #fafafa;
@@ -540,6 +560,7 @@ hr{
 .form6 li{
     list-style: none;
     margin: 12px 0;
+    /* margin-top: 0; */
 }
 .form6 label{
     margin: 0;
@@ -588,3 +609,14 @@ hr{
 .table_div{
     max-width: 680px;
 }
+.form6_form>input{
+    position: absolute;
+    right: 21px;
+    top: 5px;
+}
+.form6_form>input:checked ul{
+    background-color: #000;
+}
+/* .form6_check:checked .form6 form{
+    background-color: #000;
+} */
