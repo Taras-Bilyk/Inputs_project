@@ -7,7 +7,7 @@ This project was made to revisit the basics of HTML and CSS layout.
 The site is an inputs catalog.
 
 ## Screenshots
-<img src="img/scr/scr_1.png" width="400">
+<img src="images/scr/scr_1.png" width="400">
 
 ## Technologies Used
 - HTML
